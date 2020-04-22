@@ -1,0 +1,13 @@
+# The configuration schema is defined by the OneToOne.proto file.
+# OneToOne.proto
+
+type: google.api.Service
+config_version: 3
+name: grpcdemoapp.endpoints.computeenginegrpc.cloud.goog
+title: Roop ComputeEngine
+apis:
+  - name: com.example.grpc.OnetoOneService
+usage:
+  rules:
+  - selector: com.example.grpc.OnetoOneService.oneToOneCall
+    allow_unregistered_calls: true

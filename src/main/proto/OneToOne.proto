@@ -1,0 +1,26 @@
+syntax = "proto3";
+package com.example.grpc;
+
+option java_outer_classname = "OnetoOneproto";
+
+// Request payload
+message Request {
+
+  string name = 1;
+  
+}
+
+//Response payload
+message Response {
+
+  string welcome = 1;
+  
+}
+
+// Defining a Service, a Service can have multiple RPC operations
+service OnetoOneService {
+
+  // Define a RPC operation
+  rpc oneToOneCall(Request) returns (Response);
+  
+}
